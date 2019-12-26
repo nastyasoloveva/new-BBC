@@ -202,3 +202,8 @@
 2019/12/26 19:31:11 [error] 8808#16664: *1 connect() failed (10061: No connection could be made because the target machine actively refused it) while connecting to upstream, client: 127.0.0.1, server: localhost, request: "GET / HTTP/1.1", subrequest: "/app/items", upstream: "http://127.0.0.1:3000/app/items", host: "localhost:8080"
 2019/12/26 19:31:11 [error] 8808#16664: *1 CreateFile() "C:\github\new-BBC\nginx-1.16.1/html/favicon.ico" failed (2: The system cannot find the file specified), client: 127.0.0.1, server: localhost, request: "GET /favicon.ico HTTP/1.1", host: "localhost:8080", referrer: "http://localhost:8080/"
 2019/12/26 19:38:08 [notice] 5284#16468: signal process started
+2019/12/26 20:13:29 [emerg] 5312#12300: CreateDirectory() "D:\zachet\new-BBC\nginx-1.16.1/temp/client_body_temp" failed (3: The system cannot find the path specified)
+2019/12/26 20:32:56 [emerg] 14136#7088: CreateDirectory() "D:\zachet\new-BBC\nginx-1.16.1/temp/client_body_temp" failed (3: The system cannot find the path specified)
+2019/12/26 20:35:33 [emerg] 10856#3036: CreateDirectory() "D:\zachet\new-BBC\nginx-1.16.1/temp/client_body_temp" failed (3: The system cannot find the path specified)
+2019/12/26 20:36:01 [emerg] 92#9760: CreateDirectory() "D:\zachet\new-BBC\nginx-1.16.1/temp/client_body_temp" failed (3: The system cannot find the path specified)
+2019/12/26 20:36:53 [emerg] 6000#6728: CreateDirectory() "D:\zachet\new-BBC\nginx-1.16.1/temp/client_body_temp" failed (3: The system cannot find the path specified)
