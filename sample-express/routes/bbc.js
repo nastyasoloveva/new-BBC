@@ -76,6 +76,34 @@ router.get('/news', (req, res) => {
 });
 
 
+router.get('/places', (req, res) => {
+	var places = [
+		{
+			"url":faker.image.city(),	
+		},
+
+		{
+			"url":faker.image.city(),
+		},
+		
+		{
+			"url":faker.image.city(),	
+		},
+		
+		{
+			"url":faker.image.city(),
+		},
+		
+		{
+			"url":faker.image.city(),	
+		},
+	];
+
+  res.render('places',
+  	{"places":places}
+  	);	
+
+});
 
 module.exports = router;
 
