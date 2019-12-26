@@ -1,35 +1,43 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>BBC</title>
-	<meta charset="utf-8">
-	<style>
-	    body {
-	        font-family: Tahoma, Verdana, Arial, sans-serif;
-	    }
+ <title>BBC</title>
+ <meta charset="utf-8">
+ <style>
+     body {
+         font-family: Tahoma, Verdana, Arial, sans-serif;
+     }
 
-	    .container{
-	    	width: 80%;
-	    	margin: 0 auto;
-	    }
+     .container{
+      width: 80%;
+      margin: 0 auto;
+     }
 
-	    h1{
-	    	text-align: center;
-	    }
+     h1{
+      text-align: center;
+     }
 
-	    .photo{
-	    	width: 30px;
-	    }
+     .photo{
+      width: 30px;
+     }
 
+<<<<<<< HEAD
 	    .city{
 	    	margin-top: px;
 	    	margin-bottom: 50px;
 	    }
+=======
+     .city{
+      margin-top: 25px;
+      margin-bottom: 50px;
+     }
+>>>>>>> 205610d0b7e480b132c92ce98ec83b9a85985283
 
-	    .data{
-	    	text-align: left;
-	    }
+     .data{
+      text-align: left;
+     }
 
+<<<<<<< HEAD
 	    .news{
 	    	margin-bottom: 120px;
 	    }
@@ -43,45 +51,76 @@
 	    	padding-left: 30px;
 	    }
 	</style>
+=======
+     .news{
+      margin-bottom: 120px;
+     }
+
+     span{
+      padding-left: 50px;
+     }
+
+     .places{
+      width: 200px;
+      padding-left: 30px;
+     }
+ </style>
+>>>>>>> 205610d0b7e480b132c92ce98ec83b9a85985283
 </head>
 <body>
-	<div class="container">
-		<h1>News of your city</h1>
-		
-		<p class="data"><!--#echo var="DATE_LOCAL"--></p>
-		
-		<!--#include virtual="/app/city"-->
+ <div class="container">
+  <h1>News of your city</h1>
+  
+  <p class="data"><!--#echo var="DATE_LOCAL"--></p>
+  
+  <!--#include virtual="/app/city"-->
 
-		<h2>News</h2>
-		<!--#include virtual="/app/news"-->
+  <h2>News</h2>
+  <!--#include virtual="/app/news"-->
 
+  <h2>Weather</h2>
+  <div id="weather"></div>
+
+<<<<<<< HEAD
 		<h2>Weather</h2>
 		<div id="weather"></div>
 
 		<h2>Beautiful places</h2>
 		<!--#include virtual="/app/places"-->
+=======
+  <h2>Beautiful places</h2>
+  <!--#include virtual="/app/places"-->
+>>>>>>> 205610d0b7e480b132c92ce98ec83b9a85985283
 
-	</div>
+ </div>
 </body>
 <template id="template">
 {{#each weather}}
+<<<<<<< HEAD
 	<div>
 		<span>{{day}}</span>
 		<span>{{temperature}}</span>
 		<span>{{fallout}}</span>
 	</div>
+=======
+ <div>
+  <span>{{day}}</span>
+  <span>{{temperature}}</span>
+  <span>{{fallout}}</span>
+ </div>
+>>>>>>> 205610d0b7e480b132c92ce98ec83b9a85985283
 {{/each}}
 </template>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.4.2/handlebars.js"></script>
 <script>
-	var template = document.getElementById('template').innerHTML;
-	var renderWeather = Handlebars.compile(template);
-	document.getElementById('weather').innerHTML = renderWeather({
-		weather: [
-			{"day": "Monday", "temperature":"-1", "fallout":"snow"},	
-			{"day": "Tuesday", "temperature":"-2", "fallout":"snow"},
-			{"day": "Wednesday", "temperature":"+1", "fallout":"rain"}
-		]
+ var template = document.getElementById('template').innerHTML;
+ var renderWeather = Handlebars.compile(template);
+ document.getElementById('weather').innerHTML = renderWeather({
+  weather: [
+   {"day": "Monday", "temperature":"-1", "fallout":"snow"}, 
+   {"day": "Tuesday", "temperature":"-2", "fallout":"snow"},
+   {"day": "Wednesday", "temperature":"+1", "fallout":"rain"}
+  ]
 });
 </script>
 
