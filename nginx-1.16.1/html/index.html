@@ -22,6 +22,7 @@
 	    }
 
 	    .city{
+	    	margin-top: px;
 	    	margin-bottom: 50px;
 	    }
 
@@ -31,6 +32,15 @@
 
 	    .news{
 	    	margin-bottom: 120px;
+	    }
+
+	    span{
+	    	padding-left: 50px;
+	    }
+
+	    .places{
+	    	width: 200px;
+	    	padding-left: 30px;
 	    }
 	</style>
 </head>
@@ -46,16 +56,21 @@
 		<!--#include virtual="/app/news"-->
 
 		<h2>Weather</h2>
-		<div class="weather"></div>
+		<div id="weather"></div>
+
+		<h2>Beautiful places</h2>
+		<!--#include virtual="/app/places"-->
 
 	</div>
 </body>
 <template id="template">
-  <div>
-  	  {{#each authors}}
-    	<span>{{name}}</span>
-      {{/each}}
-  </div>
+{{#each weather}}
+	<div>
+		<span>{{day}}</span>
+		<span>{{temperature}}</span>
+		<span>{{fallout}}</span>
+	</div>
+{{/each}}
 </template>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.4.2/handlebars.js"></script>
 <script>
