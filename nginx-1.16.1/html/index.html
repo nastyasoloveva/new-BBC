@@ -1,32 +1,22 @@
 <!DOCTYPE html>
 <html>
 <head>
-<title>Events into Minsk</title>
-<meta charset="utf-8">
-<style>
-    body {
-        width: 35em;
-        margin: 0 auto;
-        font-family: Tahoma, Verdana, Arial, sans-serif;
-    }
-</style>
+	<title>BBC</title>
+	<meta charset="utf-8">
+	<style>
+	    body {
+	        width: 35em;
+	        margin: 0 auto;
+	        font-family: Tahoma, Verdana, Arial, sans-serif;
+	    }
+	</style>
 </head>
 <body>
-<h1>Art portal</h1>
-<p><!--#echo var="DATE_LOCAL"--></p>
-<!--#include virtual="/app/cities"-->
+	<h1>News of your city</h1>
+	
+	<p><!--#echo var="DATE_LOCAL"--></p>
+	<!--#include virtual="/app/cities"-->
 
-	<h3>Well-known authors</h3>
-		<div id="well-known"/>
-	</div>
-
-	<h3>Museums</h3>
-	<!--#include virtual="/app/museums"-->
-
-	<h3>Items</h3>
-	<!--#include virtual="/app/items"-->
-
-	<!--#include file="ads.html"-->
 	
 </body>
 <template id="template">

@@ -114,3 +114,5 @@
 127.0.0.1 - - [25/Dec/2019:23:37:22 +0300] "GET /css/style.css HTTP/1.1" 404 567 "http://localhost:8080/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/79.0.3945.88 Safari/537.36"
 127.0.0.1 - - [25/Dec/2019:23:37:22 +0300] "GET /css/style.css HTTP/1.1" 404 567 "http://localhost:8080/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/79.0.3945.88 Safari/537.36"
 127.0.0.1 - - [25/Dec/2019:23:37:26 +0300] "GET /favicon.ico HTTP/1.1" 404 567 "http://localhost:8080/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/79.0.3945.88 Safari/537.36"
+127.0.0.1 - - [26/Dec/2019:19:31:11 +0300] "GET / HTTP/1.1" 200 3103 "-" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/79.0.3945.88 Safari/537.36"
+127.0.0.1 - - [26/Dec/2019:19:31:11 +0300] "GET /favicon.ico HTTP/1.1" 404 567 "http://localhost:8080/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/79.0.3945.88 Safari/537.36"
