@@ -12,7 +12,7 @@ const exphbs  = require('express-handlebars');
 
 const approutes = require('./routes/app');
 const users = require('./routes/user');
-const treeroutes = require('./routes/tree');
+const bbcroutes = require('./routes/bbc');
 
 const app = express();
 
@@ -40,7 +40,7 @@ app.use(express.static(path.join(__dirname, 'public')));
 
 app.use('/app', approutes);
 app.use('/users', users);
-app.use('/app', treeroutes);
+app.use('/app', bbcroutes);
 
 /// catch 404 and forward to error handler
 app.use((req, res, next) => {
