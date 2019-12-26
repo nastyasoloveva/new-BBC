@@ -1,42 +1,95 @@
 const express = require('express');
 const router = express.Router();
-const faker = require('faker');
+const faker = require('faker/locale/ru');
 
-/* GET cities page. */
+/* GET home page. */
 router.get('/cities', (req, res) => {
-   var cities = [ 
-       { "name": "Minsk", "id": "minsk"}, 
-  	   { "name": "San Francisco", "id": "sanfrancisco" }
-  	];
+	var cities = [
+		{
+			"name":"Минск",
+			"id":"minsk"
+		},
 
-    res.render('cities', 
-  			{ "cities": cities}
-  	);
+		{
+			"name":"Могилёв",
+			"id":"mogilev"
+		},
+		{
+			"name":"Гродно",
+			"id":"grodno"
+		},
+		{
+			"name":"Брест",
+			"id":"brest"
+		},
+		{
+			"name":"Витебск",
+			"id":"vitebsk"
+		},
+		{
+			"name":"Гомель",
+			"id":"gomel"
+		},				
+	];
+
+  res.render('cities',
+  	{"cities":cities}
+  	);	
+
 });
 
-router.get('/address', (req, res) => {
-    res.render('address', 
-        { "address": [ 
-           { "name": "", "id": "byhist"}, 
-           { "name": "Art gallery 1", "id": "byart1" },
-           { "name": "Contemporary art", "id": "bycontemp" },
-           { "name": "Design space", "id": "bydesign" }
-          ]
-        }
-    );
-});
 
+router.get('/museums', (req, res) => {
+	var museums = [
+		{
+			"name":"National gallery",
+			"id":"id1"
+		},
+
+		{
+			"name":"Historic museums",
+			"id":"id2"
+		},
+
+		{
+			"name":"Contemporary museums",
+			"id": "id3"
+		}				
+	];
+
+  res.render('museums',
+  	{"museums":museums}
+  	);	
+
+});
 
 router.get('/items', (req, res) => {
-    res.render('items', 
-        { "items": [ 
-           { "name": "Главная елка (на Октябрьской площади)", "id": "shock", "url":"https://prodetok.by/img/elkinewyear2020/31.jpg"}, 
-           { "name": "Елка на Площади Независимости", "id": "miamiparts1", "url":"https://prodetok.by/img/elkinewyear2020/8.jpg" },
-           { "name": "Елка у цирка", "id": "bestshows", "url":"https://prodetok.by/img/elkinewyear2020/11.jpg" },
-           { "name": "", "id": "designmiami", "url":"https://miami2019.designmiami.com/images/content/channels/_JRH4448_PEOPLE_5_PS_LoRes.jpg" }
-          ]
-        }
-    );
+	var items = [
+		{
+			"name":"IMG1",
+			"id":"id1",
+			"url":"https://files.adme.ru/files/news/part_188/1884615/24361565-DSpDgIdW0AAKUG4-1536790943-728-a38cc21ed1-1536838846.jpg"
+		},
+
+		{
+			"name":"IMG2",
+			"id":"id2",
+			"url":"https://italy4.me/wp-content/uploads/2015/01/Museo-Gregoriano-Egizio.jpg"
+		},
+
+		{
+			"name":"IMG3",
+			"id": "id3",
+			"url": "http://tranzito.com/images/stories/206.png"
+		}				
+	];
+
+  res.render('items',
+  	{"items":items}
+  	);	
+
 });
 
+
 module.exports = router;
+

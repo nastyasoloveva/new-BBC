@@ -1,4 +1,4 @@
-    
+
 
 
 const express = require('express');
@@ -9,9 +9,10 @@ const cookieParser = require('cookie-parser');
 const bodyParser = require('body-parser');
 const exphbs  = require('express-handlebars');
 
-const routes = require('./routes/index');
+
 const approutes = require('./routes/app');
-const api = require('./routes/api');
+const users = require('./routes/user');
+const treeroutes = require('./routes/tree');
 
 const app = express();
 
@@ -37,10 +38,9 @@ app.use(bodyParser.urlencoded({
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
 
-app.use('/events', routes);
-app.use('/api/v1', api);
 app.use('/app', approutes);
-
+app.use('/users', users);
+app.use('/app', treeroutes);
 
 /// catch 404 and forward to error handler
 app.use((req, res, next) => {

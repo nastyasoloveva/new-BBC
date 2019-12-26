@@ -1,0 +1,16 @@
+<table class="treetable" cellpadding = 15> 
+		<tr>
+			<th>Адрес</th>
+			<th>Фото</th>
+			<th>Высота</th>
+			<th>Количество игрушек</th>
+		</tr>
+	{{#each tree}}
+		<tr>
+			<td>{{address}}</td>
+			<td><img class="item__img" src={{url}}></td>
+			<td>{{height}} метров</td>
+			<td>{{toys}} игрушек</td>
+		</tr>
+	{{/each}}
+</table>
